@@ -1,0 +1,32 @@
+<h1>Contact Me</h1>
+
+<div id="form-div">
+  <form #form="ngForm" (ngSubmit)="sendMessage()">
+
+    <div class="row">
+      <label>Name:</label>
+      <input #name="ngModel" [(ngModel)]="model.name" name="name" type="text" required>
+    </div>
+    <div class="error" *ngIf="name.invalid && name.touched">
+      Name is required!
+    </div>
+
+    <div class="row">
+      <label>Subject:</label>
+      <input #subject="ngModel" [(ngModel)]="model.subject" name="subject" type="text" required>
+    </div>
+    <div class="error" *ngIf="subject.invalid && subject.touched">
+      Subject is required!
+    </div>
+
+    <div class="row">
+      <label>Message:</label>
+      <textarea #content="ngModel" [(ngModel)]="model.content" name="content" required></textarea>
+    </div>
+    <div class="error" *ngIf="content.invalid && content.touched">
+      Message is required!
+    </div>
+
+    <button [disabled]="form.invalid" type="submit" class="button">Send</button>
+  </form>
+</div>

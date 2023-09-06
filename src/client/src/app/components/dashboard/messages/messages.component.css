@@ -1,0 +1,59 @@
+.dot {
+  height: 16px;
+  width: 16px;
+  background-color: #000;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.overview {
+  text-align: center;
+  display: table;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
+  padding: 10px;
+  margin: 10px auto;
+}
+
+.overview-head {
+  text-align: center;
+  display: table-row;
+  background-color: #F7F8FA;
+  border-radius: 0.25rem;
+  font-weight: bolder;
+}
+
+.overview-row {
+  text-align: center;
+  display: table-row;
+}
+
+.overview-cell {
+  display: table-cell;
+  padding: 10px;
+  vertical-align: middle;
+}
+
+.overview-cell a {
+  text-decoration: none;
+}
+
+.overview-image {
+  width: 150px;
+}
+
+.center {
+  text-align: center;
+}
+
+.read-icon {
+  cursor: pointer;
+  color: green;
+  margin-right: 12px;
+}
+
+.details-icon {
+  cursor: pointer;
+  color: rgb(255, 191, 0);
+  margin-right: 12px;
+}

@@ -1,0 +1,23 @@
+<div class="container">
+  <h1>Log In</h1>
+
+  <div id="form-div">
+    <form #form="ngForm" (ngSubmit)="login()">
+      <div class="row">
+        <input #username="ngModel" [(ngModel)]="model.username" name="username" type="text" required>
+      </div>
+      <div class="error" *ngIf="username.invalid && username.touched">
+        Name is required!
+      </div>
+
+      <div class="row">
+        <input #password="ngModel" [(ngModel)]="model.password" name="password" type="password" required>
+      </div>
+      <div class="error" *ngIf="password.invalid && password.touched">
+        Password is required!
+      </div>
+
+      <button [disabled]="form.invalid" type="submit" class="button">Log In</button>
+    </form>
+  </div>
+</div>

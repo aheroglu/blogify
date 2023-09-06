@@ -1,0 +1,9 @@
+<div *ngIf="about" class="wrapper">
+  <div class="property">
+    <label>Content:</label>
+    <quill-editor [(ngModel)]="about.content" style="height: 500px;"></quill-editor>
+  </div>
+  <div>
+    <button (click)="updateAbout()">Update</button>
+  </div>
+</div>

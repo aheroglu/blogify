@@ -1,0 +1,12 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: right;
+  margin-top: 12px;
+}
+
+button {
+  margin: 6px;
+  padding: 12px;
+}

@@ -1,0 +1,15 @@
+h2 {
+  text-align: center;
+  padding-bottom: 4px;
+}
+
+p {
+  font-size: 22px;
+  margin-bottom: 2rem;
+}
+
+.feature {
+  font-size: 22px;
+  font-weight: bolder;
+  border-bottom: 1px solid #717171;
+}

@@ -1,0 +1,19 @@
+<div *ngFor="let article of articles | paginate: { itemsPerPage: 5, currentPage: p }">
+  <div class="card">
+    <div class="card-body">
+      <div class="image-container">
+        <img [src]="article.image" class="article-image">
+      </div>
+      <div>
+        <h3>{{ article.title }}</h3>
+        <div class="meta-info">{{ article.createdDate | date }}</div>
+        <p class="description" [innerHTML]="article.description"></p>
+        <a routerLink="/{{ article.key }}" class="continue-reading">Continue reading</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div style="text-align: center; margin-top: 4rem;">
+  <pagination-controls (pageChange)="p = $event"></pagination-controls>
+</div>

@@ -1,0 +1,25 @@
+<div class="overview">
+  <div class="overview-head center">
+    <div class="overview-cell">Name</div>
+    <div class="overview-cell">Subject</div>
+    <div class="overview-cell">Date</div>
+    <div class="overview-cell">Action</div>
+  </div>
+  <div *ngFor="let message of messages | paginate: { itemsPerPage: 5, currentPage: p }" class="overview-row center">
+    <div class="overview-cell">{{ message.name }}</div>
+    <div class="overview-cell">{{ message.subject }}</div>
+    <div class="overview-cell">{{ message.createdDate | date }}</div>
+    <div class="overview-cell">
+      <span (click)="toggleReadState(message)" class="read-icon">
+        <i class="fa fa-check"></i>
+      </span>
+      <span routerLink="/dashboard/message/{{ message.id }}" class="details-icon">
+        <i class="fa fa-book"></i>
+      </span>
+    </div>
+  </div>
+</div>
+
+<div style="text-align: center; margin-top: 4rem;">
+  <pagination-controls (pageChange)="p = $event"></pagination-controls>
+</div>

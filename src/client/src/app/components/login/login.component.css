@@ -1,0 +1,25 @@
+.container {
+  margin-top: 30%;
+}
+
+h1 {
+  text-align: center;
+}
+
+#form-div {
+  margin-top: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+form {
+  max-width: 50%;
+}
+
+.error {
+  color: red;
+  margin-top: 6px;
+  margin-bottom: 12px;
+  margin-left: 6px;
+}
