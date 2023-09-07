@@ -8,19 +8,19 @@ First, you should create database. For this , you must be located in the server 
 
 Open Terminal and write this:
 
-```csharp
+```
 cd src/server
 ```
 
 After you need write this line:
 
-```csharp
+```
 dotnet ef migrations add Initialize
 ```
 
 Then you should write:
 
-```csharp
+```
 dotnet ef database update
 ```
 
@@ -28,19 +28,19 @@ Now, your database created in server folder. Some seed data creating when databa
 
 When you create database, you can be located the client folder. Open another terminal and write this:
 
-```csharp
-cd src/server
+```
+cd src/client
 ```
 
 Before run client app you need install npm packages. Write this:
 
-```typescript
+```
 npm install
 ```
 
 And you can start client app:
 
-```typescript
+```
 ng serve --open
 ```
 
